@@ -16,9 +16,9 @@ predicts aqueous solubility via three different embeddings: ECFP, GLEM, FUSED(GL
    - A CSV file that contains a molecule's ID, SMILES, and Experimental LogS. Here AqSolDBc and OChemUnseen was used for train/val and test set respectively.
     
 3. What each script does
-   - SMILEStoXYZ.py: Converts SMILES string into xyz file. A CSV file that contains a molecule's ID, SMILES, and Exprerimental LogS is needed. Returns .xyz files per molecule. (2D structure → 3D structure)
-   - BuildECFPfromSMILES.py: Converts SMILES string into xyz file via rdkit.Chem.MorganGenerator. Returns an npz file containing all the ecfps of the molecules.
-   - CreatingGraphEmbedding:
+  - SMILEStoXYZ.py: Converts SMILES string into xyz file. A CSV file that contains a molecule's ID, SMILES, and Exprerimental LogS is needed. Returns .xyz files per molecule. (2D structure → 3D structure)
+  - BuildECFPfromSMILES.py: Converts SMILES string into xyz file via rdkit.Chem.MorganGenerator. Returns an npz file containing all the ecfps of the molecules.
+  - CreatingGraphEmbedding:
      - PrecomputingCOSMO / PrecomputingWBO: Computes COSMO electron density and WBO via xtb calculation. XYZ file per molecule is needed. Also saves LOG file during the calculation.
      - DataParser: Parses data from cosmo, wbo, log files in the form required for BuildGraphEmbeddings.py.
      - egnn_norm.py: Creates embeddings from graph structure.
