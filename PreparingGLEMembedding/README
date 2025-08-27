@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# highly recommended to run this on GPU, not the login node...
+
+conda activate /home/kimsu02/miniconda3/envs/gmol/
+huggingface-cli login --token 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
+
+#example:
+#input_f = sys.argv[1] input_type = sys.argv[2] #[smi/sdf] save_path = sys.argv[3] #.npz
+# if input is smiles
+> python run_glem_batch.py input.smi smi out.npz
+# or if input is sdf -- this doesn't work now...
+#> python run_glem_batch.py input.sdf sdf out.npz
