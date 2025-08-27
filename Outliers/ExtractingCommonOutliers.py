@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 
-# ==== 파일 경로 수정하세요 ====
+# ==== 파일 경로 수정 ====
 CSV_ECFP  = "./REALEND/ecfp_test.csv"
 CSV_GLEM  = "./REALEND/glem_test.csv"
-CSV_FUSED = "./REALEND/fused_test.csv"   # 파일명에 맞게 바꿔주세요
+CSV_FUSED = "./REALEND/fused_test.csv"  
 
 TOP_N = 10
 
